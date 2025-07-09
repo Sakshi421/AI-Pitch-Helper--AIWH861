@@ -1,0 +1,51 @@
+ID,Input Pitch,Problem,Solution,Target Market,Clarity Score,Speaking Rate (WPM),Avg Pitch (Hz),Voice Emotion,Intent Label,Sentiment Label
+1,I want to launch a business that offers affordable home salon services to mothers.,Unemployment among rural women,Affordable home salon services,Mothers,5,97,200,Friendly,Ask_Feedback,Neutral
+2,I want to launch a business that offers ethnic fashion boutique to health-conscious adults.,No creative outlets for kids,Ethnic fashion boutique,Health-conscious adults,5,124,235,Nervous,Share_Idea,Positive
+3,I want to launch a business that offers ethnic fashion boutique to mothers.,Lack of healthy snacks,Ethnic fashion boutique,Mothers,3,96,182,Confident,Share_Idea,Positive
+4,I want to launch a business that offers ethnic fashion boutique to school kids.,Limited access to tutoring,Ethnic fashion boutique,School kids,2,113,225,Excited,Ask_Feedback,Negative
+5,I want to launch a business that offers home-based tutoring to rural women.,Expensive beauty services,Home-based tutoring,Rural women,5,109,225,Nervous,Pitch_Business,Positive
+6,I want to launch a business that offers affordable home salon services to rural women.,Lack of healthy snacks,Affordable home salon services,Rural women,5,112,224,Nervous,Pitch_Business,Negative
+7,I want to launch a business that offers whatsapp-based mental health support to health-conscious adults.,No budget fitness programs,WhatsApp-based mental health support,Health-conscious adults,5,130,220,Excited,Pitch_Business,Negative
+8,I want to launch a business that offers healthy snack delivery to urban women.,No creative outlets for kids,Healthy snack delivery,Urban women,4,109,183,Calm,Share_Idea,Neutral
+9,I want to launch a business that offers online career guidance platform to school kids.,No career guidance in small towns,Online career guidance platform,School kids,5,104,220,Confident,Pitch_Business,Positive
+10,I want to launch a business that offers ethnic fashion boutique to health-conscious adults.,Lack of healthy snacks,Ethnic fashion boutique,Health-conscious adults,4,118,212,Friendly,Ask_Feedback,Positive
+11,I want to launch a business that offers affordable home salon services to health-conscious adults.,Unemployment among rural women,Affordable home salon services,Health-conscious adults,2,119,216,Friendly,Ask_Feedback,Negative
+12,I want to launch a business that offers low-cost fitness app for women to rural women.,Unavailability of ethnic clothes,Low-cost fitness app for women,Rural women,3,91,229,Excited,Ask_Feedback,Positive
+13,I want to launch a business that offers affordable home salon services to urban women.,Expensive beauty services,Affordable home salon services,Urban women,5,108,180,Excited,Pitch_Business,Positive
+14,I want to launch a business that offers affordable home salon services to health-conscious adults.,Unavailability of ethnic clothes,Affordable home salon services,Health-conscious adults,4,99,248,Nervous,Pitch_Business,Neutral
+15,I want to launch a business that offers healthy snack delivery to budget shoppers.,Expensive beauty services,Healthy snack delivery,Budget shoppers,2,121,247,Friendly,Pitch_Business,Negative
+16,I want to launch a business that offers affordable home salon services to mothers.,No career guidance in small towns,Affordable home salon services,Mothers,2,124,212,Calm,Pitch_Business,Positive
+17,I want to launch a business that offers handicraft training and sales to working professionals.,No creative outlets for kids,Handicraft training and sales,Working professionals,3,107,214,Friendly,Share_Idea,Positive
+18,I want to launch a business that offers healthy snack delivery to health-conscious adults.,Limited access to tutoring,Healthy snack delivery,Health-conscious adults,5,108,198,Excited,Ask_Feedback,Negative
+19,I want to launch a business that offers home-based tutoring to rural women.,Inaccessible mental health support,Home-based tutoring,Rural women,4,103,205,Calm,Ask_Feedback,Negative
+20,I want to launch a business that offers online pickle store to college students.,No career guidance in small towns,Online pickle store,College students,4,95,222,Nervous,Pitch_Business,Neutral
+21,I want to launch a business that offers ethnic fashion boutique to teenagers.,No budget fitness programs,Ethnic fashion boutique,Teenagers,3,90,184,Excited,Pitch_Business,Neutral
+22,I want to launch a business that offers handicraft training and sales to school kids.,Lack of authentic condiments,Handicraft training and sales,School kids,4,95,222,Friendly,Pitch_Business,Negative
+23,I want to launch a business that offers whatsapp-based mental health support to school kids.,No creative outlets for kids,WhatsApp-based mental health support,School kids,2,100,242,Calm,Share_Idea,Positive
+24,I want to launch a business that offers low-cost fitness app for women to working professionals.,No budget fitness programs,Low-cost fitness app for women,Working professionals,3,103,184,Excited,Share_Idea,Positive
+25,I want to launch a business that offers affordable home salon services to teenagers.,No creative outlets for kids,Affordable home salon services,Teenagers,2,119,198,Calm,Pitch_Business,Negative
+26,I want to launch a business that offers home-based tutoring to budget shoppers.,Limited access to tutoring,Home-based tutoring,Budget shoppers,3,118,235,Confident,Share_Idea,Positive
+27,I want to launch a business that offers art classes for kids to working professionals.,No creative outlets for kids,Art classes for kids,Working professionals,2,128,198,Excited,Share_Idea,Negative
+28,I want to launch a business that offers art classes for kids to small town residents.,No creative outlets for kids,Art classes for kids,Small town residents,2,127,196,Friendly,Ask_Feedback,Positive
+29,I want to launch a business that offers handicraft training and sales to rural women.,Lack of healthy snacks,Handicraft training and sales,Rural women,3,111,210,Nervous,Pitch_Business,Negative
+30,I want to launch a business that offers whatsapp-based mental health support to budget shoppers.,Limited access to tutoring,WhatsApp-based mental health support,Budget shoppers,3,102,215,Nervous,Ask_Feedback,Negative
+31,I want to launch a business that offers low-cost fitness app for women to college students.,Limited access to tutoring,Low-cost fitness app for women,College students,2,97,211,Friendly,Ask_Feedback,Negative
+32,I want to launch a business that offers whatsapp-based mental health support to small town residents.,Expensive beauty services,WhatsApp-based mental health support,Small town residents,2,125,238,Excited,Ask_Feedback,Negative
+33,I want to launch a business that offers art classes for kids to budget shoppers.,No creative outlets for kids,Art classes for kids,Budget shoppers,4,101,213,Nervous,Ask_Feedback,Neutral
+34,I want to launch a business that offers online pickle store to urban women.,Inaccessible mental health support,Online pickle store,Urban women,4,91,214,Calm,Pitch_Business,Neutral
+35,I want to launch a business that offers healthy snack delivery to working professionals.,Lack of healthy snacks,Healthy snack delivery,Working professionals,5,116,241,Calm,Ask_Feedback,Negative
+36,I want to launch a business that offers low-cost fitness app for women to small town residents.,Limited access to tutoring,Low-cost fitness app for women,Small town residents,3,112,191,Calm,Share_Idea,Negative
+37,I want to launch a business that offers handicraft training and sales to mothers.,Limited access to tutoring,Handicraft training and sales,Mothers,3,127,213,Excited,Ask_Feedback,Positive
+38,I want to launch a business that offers handicraft training and sales to health-conscious adults.,Expensive beauty services,Handicraft training and sales,Health-conscious adults,4,117,191,Friendly,Pitch_Business,Positive
+39,I want to launch a business that offers handicraft training and sales to urban women.,Limited access to tutoring,Handicraft training and sales,Urban women,3,123,187,Nervous,Ask_Feedback,Negative
+40,I want to launch a business that offers home-based tutoring to school kids.,Limited access to tutoring,Home-based tutoring,School kids,5,113,183,Friendly,Ask_Feedback,Neutral
+41,I want to launch a business that offers ethnic fashion boutique to college students.,No creative outlets for kids,Ethnic fashion boutique,College students,2,115,241,Calm,Share_Idea,Positive
+42,I want to launch a business that offers online career guidance platform to working professionals.,Unemployment among rural women,Online career guidance platform,Working professionals,5,97,200,Calm,Ask_Feedback,Negative
+43,I want to launch a business that offers affordable home salon services to mothers.,Unemployment among rural women,Affordable home salon services,Mothers,2,129,199,Confident,Ask_Feedback,Negative
+44,I want to launch a business that offers healthy snack delivery to school kids.,Unemployment among rural women,Healthy snack delivery,School kids,5,104,208,Excited,Share_Idea,Positive
+45,I want to launch a business that offers online career guidance platform to budget shoppers.,Inaccessible mental health support,Online career guidance platform,Budget shoppers,4,102,195,Excited,Ask_Feedback,Negative
+46,I want to launch a business that offers whatsapp-based mental health support to school kids.,Lack of authentic condiments,WhatsApp-based mental health support,School kids,5,118,234,Excited,Pitch_Business,Negative
+47,I want to launch a business that offers affordable home salon services to rural women.,No career guidance in small towns,Affordable home salon services,Rural women,3,101,216,Excited,Share_Idea,Positive
+48,I want to launch a business that offers healthy snack delivery to teenagers.,Unemployment among rural women,Healthy snack delivery,Teenagers,3,103,218,Excited,Share_Idea,Negative
+49,I want to launch a business that offers handicraft training and sales to college students.,No creative outlets for kids,Handicraft training and sales,College students,2,109,231,Calm,Ask_Feedback,Positive
+50,I want to launch a business that offers online career guidance platform to school kids.,Lack of healthy snacks,Online career guidance platform,School kids,5,122,229,Nervous,Pitch_Business,Neutral

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pitch Helper - UI Mockups</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .mockup-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .mockup-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .mockup-title {
+            font-size: 1.5rem;
+            color: #5a67d8;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .phone-mockup {
+            width: 300px;
+            height: 600px;
+            background: #1a1a1a;
+            border-radius: 25px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #333;
+        }
+
+        .phone-screen {
+            width: 280px;
+            height: 580px;
+            margin: 10px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .dashboard-screen {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            color: white;
+            height: 100%;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #fff;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .metric-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .record-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #ff4757;
+            border: none;
+            color: rgb(202, 165, 165);
+            font-size: 2rem;
+            margin: 2rem auto;
+            display: block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .record-button:hover {
+            background: #ff3742;
+            transform: scale(1.05);
+        }
+
+        .feedback-panel {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .clarity-score {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .score-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .score-high { background: #2ed573; }
+        .score-medium { background: #ffa502; }
+        .score-low { background: #ff3838; }
+
+        .voice-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .metric-item {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .suggestion-list {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .suggestion-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .web-interface {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            height: 400px;
+            overflow-y: auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: #667eea;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: #f0f0f0;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .pitch-input {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .textarea-input {
+            width: 100%;
+            height: 150px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a67d8;
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+
+        .live-feedback {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .waveform {
+            height: 60px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .wave-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            animation: wave 2s infinite;
+        }
+
+        @keyframes wave {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .whatsapp-chat {
+            background: #e5ddd5;
+            border-radius: 10px;
+            padding: 1rem;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .chat-header {
+            background: #075e54;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px 10px 0 0;
+            margin: -1rem -1rem 1rem -1rem;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            max-width: 80%;
+        }
+
+        .user-message {
+            background: #dcf8c6;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-left: auto;
+        }
+
+        .bot-message {
+            background: white;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-right: auto;
+        }
+
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 8px;
+            margin-right: auto;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #999;
+            animation: typing 1.5s infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        .feature-showcase {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .analytics-dashboard {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,1,0.1);
+        }
+
+        .chart-container {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .chart-placeholder {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .design-source {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+
+        .source-section {
+            margin-bottom: 1rem;
+        }
+
+        .source-title {
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mobile-first {
+            order: -1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .mockup-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 AI Pitch Helper - UI Designs</h1>
+            <p>Complete User Interface Design System for Women Entrepreneurs</p>
+        </div>
+
+        <div class="mockup-grid">
+            <!-- Mobile Dashboard -->
+            <div class="mockup-card mobile-first">
+                <h2 class="mockup-title">📱 Mobile Dashboard</h2>
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="dashboard-screen">
+                            <div class="user-profile">
+                                <div class="profile-pic">👩‍💼</div>
+                                <div>
+                                    <h3>Welcome, Sarah!</h3>
+                                    <p>Ready to perfect your pitch?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div>Average Clarity Score</div>
+                                <div class="metric-value">4.2/5</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div>Pitches This Week</div>
+                                <div class="metric-value">12</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div>Improvement Rate</div>
+                                <div class="metric-value">+15%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Recording Interface -->
+            <div class="mockup-card">
+                <h2 class="mockup-title">🎙️ Voice Recording Interface</h2>
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div style="background: #f8f9fa; padding: 2rem; height: 100%;">
+                            <div style="text-align: center; margin-bottom: 2rem;">
+                                <h3 style="color: #333; margin-bottom: 1rem;">Record Your Pitch</h3>
+                                <p style="color: #666;">Tap to start recording</p>
+                            </div>
+                            
+                            <div class="waveform">
+                                <div class="wave-animation"></div>
+                            </div>
+                            
+                            <button class="record-button" onclick="this.style.background='#2ed573'; this.innerHTML='⏸️'">🎤</button>
+                            
+                            <div style="text-align: center; margin-top: 2rem;">
+                                <div style="font-size: 2rem; color: #667eea; margin-bottom: 1rem;">00:45</div>
+                                <p style="color: #666;">Recording in progress...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real-time Feedback -->
+            <div class="mockup-card">
+                <h2 class="mockup-title">📊 Real-time Feedback</h2>
+                <div class="feedback-panel">
+                    <div class="clarity-score">
+                        <div class="score-circle score-high">4.2</div>
+                        <div>Clarity Score</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 84%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="voice-metrics">
+                        <div class="metric-item">
+                            <div style="font-size: 1.5rem; color: #667eea;">112</div>
+                            <div>WPM</div>
+                        </div>
+                        <div class="metric-item">
+                            <div style="font-size: 1.5rem; color: #667eea;">220 Hz</div>
+                            <div>Pitch</div>
+                        </div>
+                    </div>
+                    
+                    <div class="suggestion-list">
+                        <div style="font-weight: bold; color: #3498db; margin-bottom: 0.5rem;">💡 Suggestions</div>
+                        <div class="suggestion-item">✨ Slow down slightly - aim for 100-110 WPM</div>
+                        <div class="suggestion-item">🎯 Emphasize your unique value proposition</div>
+                        <div class="suggestion-item">💪 Great confidence level - keep it up!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Interface -->
+            <div class="mockup-card">
+                <h2 class="mockup-title">💻 Web Interface</h2>
+                <div class="web-interface">
+                    <div class="nav-bar">
+                        <div style="font-weight: bold; color: #667eea;">🎯 PitchHelper</div>
+                        <div class="nav-links">
+                            <a href="#" class="nav-link">Dashboard</a>
+                            <a href="#" class="nav-link">Practice</a>
+                            <a href="#" class="nav-link">History</a>
+                            <a href="#" class="nav-link">Analytics</a>
+                        </div>
+                    </div>
+                    
+                    <div class="main-content">
+                        <div class="pitch-input">
+                            <h3 style="margin-bottom: 1rem;">✏️ Enter Your Pitch</h3>
+                            <textarea class="textarea-input" placeholder="I want to launch a business that..."></textarea>
+                            <div class="button-group">
+                                <button class="btn btn-primary">🎤 Record Audio</button>
+                                <button class="btn btn-secondary">💬 Analyze Text</button>
+                            </div>
+                        </div>
+                        
+                        <div class="live-feedback">
+                            <h3 style="margin-bottom: 1rem;">🔄 Live Feedback</h3>
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+                                <div style="margin-bottom: 1rem;">
+                                    <div style="font-size: 0.9rem; color: #666;">Problem Identified:</div>
+                                    <div style="color: #e74c3c;">✅ Clear problem statement</div>
+                                </div>
+                                <div style="margin-bottom: 1rem;">
+                                    <div style="font-size: 0.9rem; color: #666;">Solution Clarity:</div>
+                                    <div style="color: #f39c12;">⚠️ Needs more detail</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.9rem; color: #666;">Target Market:</div>
+                                    <div style="color: #27ae60;">✅ Well-defined audience</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WhatsApp Bot Interface -->
+            <div class="mockup-card">
+                <h2 class="mockup-title">📱 WhatsApp Bot</h2>
+                <div class="whatsapp-chat">
+                    <div class="chat-header">
+                        <div style="font-weight: bold;">🤖 PitchHelper Bot</div>
+                        <div style="font-size: 0.8rem;">Online</div>
+                    </div>
+                    
+                    <div class="message user-message">
+                        <div>Hi! I want to practice my pitch for tomorrow's meeting.</div>
+                    </div>
+                    
+                    <div class="message bot-message">
+                        <div>Great! I'm here to help you perfect your pitch. You can either:</div>
+                        <div style="margin-top: 0.5rem;">
+                            🎤 Send me a voice message<br>
+                            ✍️ Type your pitch<br>
+                            📊 Review your progress
+                        </div>
+                    </div>
+                    
+                    <div class="message user-message">
+                        <div>🎵 Voice message (0:45)</div>
+                    </div>
+                    
+                    <div class="message bot-message">
+                        <div>🎯 Analysis Complete!</div>
+                        <div style="margin-top: 0.5rem;">
+                            <div>✅ Clarity Score: 4.2/5</div>
+                            <div>🎤 Speaking Rate: 112 WPM</div>
+                            <div>😊 Emotion: Confident</div>
+                        </div>
+                    </div>
+                    
+                    <div class="typing-indicator">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Dashboard -->
+            <div class="mockup-card">
+                <h2 class="mockup-title">📈 Analytics Dashboard</h2>
+                <div class="analytics-dashboard">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                        <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 2rem; color: #667eea; font-weight: bold;">24</div>
+                            <div style="color: #666;">Total Sessions</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 2rem; color: #2ed573; font-weight: bold;">89%</div>
+                            <div style="color: #666;">Improvement Rate</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 2rem; color: #ffa502; font-weight: bold;">4.3</div>
+                            <div style="color: #666;">Avg Clarity Score</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-placeholder">
+                            📊 Progress Chart - Clarity Score Over Time
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-placeholder">
+                            🎯 Component Analysis - Problem, Solution, Market Clarity
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Showcase -->
+        <div class="feature-showcase">
+            <h2 style="text-align: center; color: #667eea; margin-bottom: 2rem;">🚀 Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Voice Analysis</h3>
+                    <p>Real-time voice coaching with pitch, pace and emotion analysis</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI Feedback</h3>
+                    <p>Intelligent suggestions for improving clarity and impact</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Detailed analytics and improvement metrics over time</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <h3>Multi-Platform</h3>
+                    <p>It is on web, mobile, and WhatsApp for maximum accessibility</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Sources -->
+        <div class="design-source">
+            <h2 style="text-align: center; color: #ffd700; margin-bottom: 2rem;">🎨 Design Sources & Resources</h2>
+            
+            <div class="responsive-grid">
+                <div class="source-section">
+                    <div class="source-title">📱 Mobile UI Inspiration</div>
+                    <div>• Dribbble - Modern mobile app designs</div>
+                    <div>• Behance - Voice interface patterns</div>
+                    <div>• Material Design - Google's design system</div>
+                    <div>• Apple Human Interface Guidelines</div>
+                </div>
+                
+                <div class="source-section">
+                    <div class="source-title">🎨 Design Tools Used</div>
+                    <div>• Figma - UI/UX design and prototyping</div>
+                    <div>• Sketch - Vector-based design</div>
+                    <div>• Adobe XD - User experience design</div>
+                    <div>• Canva - Quick mockups and graphics</div>
+                </div>
+                
+                <div class="source-section">
+                    <div class="source-title">🌈 Color Palette</div>
+                    <div>• Primary: #667eea (Modern Blue)</div>
+                    <div>• Secondary: #764ba2 (Purple)</div>
+                    <div>• Success: #2ed573 (Green)</div>
+                    <div>• Warning: #ffa502 (Orange)</div>
+                    <div>• Error: #ff3838 (Red)</div>
+                </div>
+                
+                <div class="source-section">
+                    <div class="source-title">🔤 Typography</div>
+                    <div>• Primary: Inter (Modern, clean)</div>
+                    <div>• Secondary: Segoe UI (System default)</div>
+                    <div>• Sizes: 3rem (Headers), 1.5rem (Titles)</div>
+                    <div>• Weights: 400 (Regular), 500 (Medium), 700 (Bold)</div>
+                </div>
+                
+                <div class="source-section">
+                    <div class="source-title">🖼️ Icons & Images</div>
+                    <div>• Lucide React - Icon library</div>
+                    <div>• Heroicons - Tailwind CSS icons</div>
+                    <div>• Emoji - For friendly user interaction</div>
+                    <div>• Unsplash - Stock photos (when needed)</div>
+                </div>
+                
+                <div class="source-section">
+                    <div class="source-title">🎯 UX Patterns</div>
+                    <div>• Progressive disclosure - Step-by-step flow</div>
+                    <div>• Real-time feedback - Instant responses</div>
+                    <div>• Conversational UI - Chat-like interface</div>
+                    <div>• Gamification - Progress tracking</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>  
